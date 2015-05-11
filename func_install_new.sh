@@ -31,7 +31,7 @@ if [ ! -d $OPENSSL_PREFIX ]; then
     DEPEND=openssl-1.0.1e
     if [ ! -f $TMP/${DEPEND}.tar.gz ]; then
 		#wget -P $TMP http://www.openssl.org/source/${DEPEND}.tar.gz
-        wget -P $TMP http://soft.ucweb.local/platform/ucmha/${DEPEND}.tar.gz
+        wget -P $TMP http://myhost/${DEPEND}.tar.gz
     fi
     if [ -d $TMP/${DEPEND} ]; then
         rm -rf $TMP/${DEPEND}
@@ -53,7 +53,7 @@ if [ ! -d $PYTHON_PREFIX ]; then
     DEPEND=Python-2.7.3
     if [ ! -f $TMP/${DEPEND}.tar.bz2 ]; then
 		#wget -P $TMP http://www.python.org/ftp/python/2.7.3/${DEPEND}.tar.bz2
-        wget -P $TMP http://soft.ucweb.local/platform/ucmha/${DEPEND}.tar.bz2
+        wget -P $TMP http://myhost/${DEPEND}.tar.bz2
     fi
     if [ -d $TMP/${DEPEND} ]; then
         rm -rf $TMP/${DEPEND}
@@ -83,7 +83,7 @@ for DEPEND in certmaster-0.28-uc func-0.28-uc pyOpenSSL-0.13 simplejson-3.3.0
 do
 
     if [ ! -f $TMP/${DEPEND}.tar.gz ]; then
-		wget -P $TMP http://soft.ucweb.local/platform/ucmha/${DEPEND}.tar.gz 
+		wget -P $TMP http://myhost/${DEPEND}.tar.gz 
 	fi
     if [ -d $TMP/${DEPEND} ]; then
         rm -rf $TMP/${DEPEND}
